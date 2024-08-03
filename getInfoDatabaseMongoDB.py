@@ -262,7 +262,7 @@ def gravaDadosSqlite(v_ListValuesMongoDB):
             INSERT INTO infoDatabaseMongoDb
                 (Database, Empresa, QtdeCollections, StorageSizeMb, DataSizeMb, TotalDocumentos, MediaTamanhoObjetosKb, DataExecucao) 
             VALUES 
-            (?, ?, ?, ?, ?, ?, ?, datetime());
+            (?, ?, ?, ?, ?, ?, ?, datetime('now','localtime'));
             '''
 
             cur = conn.cursor()
